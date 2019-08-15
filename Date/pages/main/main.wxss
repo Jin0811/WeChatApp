@@ -1,0 +1,103 @@
+/* pages/main/main.wxss */
+page{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #d9ebf9;
+  overflow: hidden;
+  padding-top: 25%;
+  position: relative;
+  margin: 0;
+}
+.container{
+  width: 600rpx;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.userForm{
+  width: 570rpx;
+  height: 100rpx;
+  padding: 0 15rpx;
+  background-color: white;
+  /* border: 1rpx solid red; */
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+  display: block;
+  position: relative;
+}
+.forPosition{
+  width: 480rpx;
+  height: 100rpx;
+  /* border: 1rpx solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputBox{
+  width: 40%;
+  height: 50rpx;
+  line-height: 50rpx;
+  /* text-align: center; */
+  padding-left: 30rpx;
+  border-bottom: 1rpx solid #d1e5f5;
+}
+.pickerBox{
+  width: 45%;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #d1e5f5;
+}
+.addBtn{
+  width: 70rpx;
+  height: 60rpx;
+  padding: 0;
+  background-color: #d9ebf9;
+  position: absolute;
+  top: 20rpx;
+  right: 15rpx;
+  border: none;
+  outline: none;
+  color: black;
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 60rpx;
+}
+.souvenirContent{
+  width: 600rpx;
+  height: 600rpx;
+  /* border: 1rpx solid red; */
+  background-color: white;
+  border-radius: 15rpx;
+  overflow: auto;
+}
+.souvenirContent > .souvenirtList{
+  width: 530rpx;
+  height: 120rpx;
+  border-bottom: 1rpx solid #d9ebf9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35rpx;
+}
+.souvenirtList > .information{
+  width: 450rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid red; */
+}
+.souvenirtList > .delete{
+  width: 80rpx;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1rpx solid red; */
+}
+.delete > image{
+  width: 48rpx;
+  height: 48rpx;
+}

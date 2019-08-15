@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/weather/weather",
+    "pages/main/main"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气的获取和展示哦~"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarBackgroundColor": "#d9ebf9",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "纪念日",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor":"#d9ebf9",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/login/login",
+        "text": "二十六"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "纪念日"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+<view class="container">
+  <form class="userForm" bindsubmit="formSubmit">
+    <view class="forPosition">
+      <input class="inputBox" placeholder="{{text}}" bindfocus="inputFocus" bindblur="inputBlur" name="userInput" value="{{inputContent}}"></input>
+      <picker class="pickerBox" mode="date" name="inputDay" bindchange="showTime">{{defaultMessage}}</picker>
+    </view>
+    <button class="addBtn" form-type="submit" bindtap="addBtn">Add</button>
+  </form>
+
+  <view class="souvenirContent">
+    <view class="souvenirtList" wx:for="{{list}}" wx:key="{{item}}">
+      <view class="information">
+        <text>{{item.name}} {{item.word}}</text>
+        <text>{{item.day}} 天</text>
+      </view>
+      <view class="delete">
+        <image src="../../images/delete.png" bindtap="deleteBtn" data-souvenir-id="{{item.id}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 
+  现在基本的功能已经完成，但是还有几个地方可以进行改进
+
+  已经完成：1、用户是可以选择比当前日期大的日期的，这样就造成，item.day可能为负值，
+  这个时候，考虑将“已经”也设置为变量，如果用户选择的日期是未来的日期，
+  就将“已经”设置为“还有”，同时将item.day进行取反操作
+
+  2、现在的每一个纪念日没有编号，利用每一个纪念日在数组中的位置，设置一个索引
+
+  已经完成：3、现在的纪念日只能添加，不能删除，可以添加删除按钮，通过在数组中删除该纪念日来完成删除操作
+
+  已经完成：4、需要添加一个判断，当input和picker的值为空时，不能进行添加，并弹出弹窗提示用户
+ -->

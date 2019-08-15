@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 地区选择 -->
+  <picker mode="region" bindchange="changeRegion">
+    <view>{{region}}</view>
+  </picker>
+
+  <!-- 天气文本显示 -->
+  <text>{{now.tmp}}℃ {{now.cond_txt}}</text>
+
+  <!-- 图片区域 -->
+  <image src="../../images/{{now.cond_code}}.png"></image>
+
+  <!-- 多行天气信息 -->
+  <view class="detail">
+    <view class="bar bgc">
+      <view class="box">湿度</view>
+      <view class="box">气压</view>
+      <view class="box">能见度</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.hum}}%</view>
+      <view class="box">{{now.pres}}hpa</view>
+      <view class="box">{{now.vis}}Km</view>
+    </view>
+    <view class="bar bgc">
+      <view class="box">风向</view>
+      <view class="box">风速</view>
+      <view class="box">风力</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.wind_dir}}</view>
+      <view class="box">{{now.wind_spd}}Km</view>
+      <view class="box">{{now.wind_sc}}级</view>
+    </view>
+  </view>
+</view>
+
+<!-- 
+  整理一下业务逻辑：
+    1、这是一个向用户提供天气查询的页面
+    2、当用户打开页面时，自动获取到用户的位置，查询用户所处位置的天气，并显示出来
+      该功能，利用wx.getLocation获取到用户的经度和纬度，并将其进行本地数据缓存
+    3、getWeather函数是利用了和风天气的API，查询天气需要经度和纬度两个参数，
+      这个两个参数可以通过获取onload中缓存的数据来得到，这里的经度和纬度也就是用户的位置
+    4、有一个问题是，wx.getLocation获取到的是用户的经度和纬度，但是picker获取到的
+      是用户的省市区，这就造成getWeather中传递参数不统一，可以加一个判断，根据不同的
+      参数来不同的方式来进行request请求
+ -->

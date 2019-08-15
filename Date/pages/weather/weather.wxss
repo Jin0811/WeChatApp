@@ -1,0 +1,40 @@
+page{
+  background-color: #d9ebf9;
+}
+.container{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d9ebf9;
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 40rpx;
+}
+.box{
+  width: 33.3%;
+  text-align: center;
+}
+text{
+  font-size: 75rpx;
+  color: #3C5F81;
+  /* color: white; */
+}
+image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.bgc{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: rgb(180, 214, 248);
+  border-radius: 10rpx;
+}

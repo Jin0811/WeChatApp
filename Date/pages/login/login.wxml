@@ -1,0 +1,8 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <open-data class="userAvatar" type="userAvatarUrl"></open-data>
+  <view>
+    <text>你好呀  </text>
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+</view>
